@@ -7,13 +7,55 @@
  </head>
  <body></body>
  <script>
+   //Harjutus 5
+   //Positiivne või negatiivne
+   let arv = 0;
+   switch(arv){
+      case (arv > 0):
+         console.log("Pos");
+         break;
+      case (arv == 0):
+         console.log("null");
+         break;
+      case (arv < 0):
+         console.log("Neg");
+         break;
+      default:
+         console.log("Mingi jama");
+   }
+
+
+
+   //temperatuur
+   let temp = 14;
+   if (temp > 25) {
+      console.log("Kuum!");
+   } else if(temp >= 15 && temp <= 25){
+      console.log("Norm!");
+   } else {
+      console.log("Jahe!");
+   }   
+
    //Harjutus 4
    //Nädalapäevad
-   
+   let np = ["Esmaspäev", "Teisipäev", "Kolmapäev", "Neljapäev", "Reede"];
+   console.log("Massiivi suurus: "+np.length);
+   np.push("Laupäev", "Pühapäev");
+   np.reverse();
+   console.log("Viimane element: "+np[np.length-1]);
 
-
-
-
+   //Sportlased
+   let sportlased = [
+      ["Alice", 25, [10.2, 9.8, 10.5]],
+      ["Bob", 22, [9.5, 9.6, 9.7]],
+      ["Charlie", 28, [11.1, 11.2, 11.5]]
+      ];
+   console.log(sportlased[0][0]);
+   console.log(Math.max(...sportlased[0][2]));
+   console.log(sportlased[1][0]);
+   console.log(Math.max(...sportlased[1][2]));
+   console.log(sportlased[2][0]);
+   console.log(Math.max(...sportlased[2][2]));
 
    //Harjutus 3
    //Serveri töökulu
@@ -29,22 +71,22 @@
    let aeg = kaugus/kiirus;
    console.log(`Sõitmiseks kuluv aeg: ${aeg.toFixed(2)}`);
 
-
    //Harjutus 2
    //  Kellaaeg
    let t = 2;
    let m = 38;
    let s = 59;
    console.log(t+":"+m+":"+s+"PM");
+
    // Mallide kasutamine
    let enimi = "Mari";
    let pnimi = "Maasikas";
    console.log(`${enimi} ${pnimi} nimetähed on ${enimi[0]}.${pnimi[0]}.`)
+
    // Andmerida analüüs
    "1,Marshal,Martinovic,mmartinovic0@dedecms.com,Male,40.19.226.175"
-   console.log((data.split(","))[5]);
+   console.log(data.split(",")[5])
    console.log((data.split(","))[3].split("@")[0])
-
 
    //Harjutus  1
    console.log("Tere maailm!")
