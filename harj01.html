@@ -7,6 +7,29 @@
  </head>
  <body></body>
  <script>
+   //Harjutus 8
+   //Mündid
+   let counter = 0;
+   let sum = 0;
+   let money = [200, 0.2, 10, 0.01, 2, 1, 0.1, 0.02, 0.05, 100, 5, 0.5, 50, 20];
+   let coins = [];
+
+   while (counter <= money.length) {
+      if (money[counter]<= 2) {
+         coins.push(money[counter]);
+         sum+=money[counter];
+      }
+      counter++;
+   } 
+
+   console.log(coins);
+   console.log(sum);
+
+
+
+
+
+
    //Harjutus 7
    //Temperatuurid
    const temperatures = [
@@ -32,7 +55,7 @@
          const day = e[j];
          summa+=day;
       }
-      console.log(months.split(",")[i].trim()+": "+summa/e.length);
+      console.log(months.split(",")[i].trim()+": "+(summa/e.length).toFixed(2));
    }   
 
 
